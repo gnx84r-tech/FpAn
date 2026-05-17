@@ -8,98 +8,154 @@
         :root {
             --primary: #00ffcc;
             --bg: #0d1117;
+            --card-bg: #161b22;
             --text: #c9d1d9;
         }
 
+        * {
+            box-sizing: border-box; /* Verhindert Layout-Fehler durch Padding */
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
+            padding: 0;
             line-height: 1.6;
+            overflow-x: hidden; /* Verhindert horizontales Scrollen auf Handys */
         }
 
+        /* Hero Section - Mobil optimiert */
         header {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
+            background-position: center;
             text-align: center;
+            padding: 20px;
         }
 
-        h1 { color: var(--primary); font-size: 3rem; }
+        h1 { 
+            color: var(--primary); 
+            font-size: clamp(2rem, 8vw, 3.5rem); /* Schriftgröße passt sich flüssig an */
+            margin-bottom: 10px;
+        }
 
+        header p {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            opacity: 0.8;
+        }
+
+        /* Container für Inhalte */
         section {
-            padding: 50px 20px;
-            max-width: 900px;
+            padding: 60px 20px;
+            max-width: 1000px;
             margin: auto;
         }
 
+        h2 {
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        /* Responsives Grid */
         .card-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            /* Automatische Spalten: mindestens 280px, sonst 1 Spalte */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
             gap: 20px;
         }
 
         .card {
-            background: #161b22;
-            padding: 20px;
-            border-radius: 8px;
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
             border-left: 4px solid var(--primary);
-            transition: transform 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease;
         }
 
-        .card:hover { transform: translateY(-5px); }
-
+        /* Code-Snippet Optimierung */
         pre {
             background: #010409;
-            padding: 15px;
-            border-radius: 5px;
+            padding: 20px;
+            border-radius: 8px;
             color: #79c0ff;
-            overflow-x: auto;
+            overflow-x: auto; /* Wichtig für Mobile! */
+            font-size: 0.9rem;
+            border: 1px solid #30363d;
+        }
+
+        /* Footer / Kontakt */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        /* Media Query für sehr kleine Bildschirme */
+        @media (max-width: 480px) {
+            section {
+                padding: 40px 15px;
+            }
+            .card {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Fachinformatiker <br><span>Anwendungsentwicklung</span></h1>
-        <p>Logik. Code. Lösungen.</p>
+        <h1>Fachinformatiker <br><span style="color:white">Anwendungsentwicklung</span></h1>
+        <p>Präsentiert von [Dein Name]</p>
     </header>
 
     <section id="ueberblick">
-        <h2>Was macht ein FIAE?</h2>
+        <h2>Das Berufsbild</h2>
         <div class="card-container">
             <div class="card">
-                <h3>Analyse</h3>
-                <p>Nutzeranforderungen verstehen und technische Konzepte erstellen.</p>
+                <h3>💻 Entwicklung</h3>
+                <p>Planung und Umsetzung von Softwareprojekten mit modernen Frameworks.</p>
             </div>
             <div class="card">
-                <h3>Coding</h3>
-                <p>Softwarelösungen in verschiedenen Programmiersprachen realisieren.</p>
+                <h3>🗄️ Datenbanken</h3>
+                <p>Strukturierung und Verwaltung von Datenmengen (SQL/NoSQL).</p>
             </div>
             <div class="card">
-                <h3>Testen</h3>
-                <p>Fehler finden (Debugging) und Qualität sicherstellen.</p>
+                <h3>⚙️ Prozesse</h3>
+                <p>Optimierung von Betriebsabläufen durch maßgeschneiderte IT-Lösungen.</p>
             </div>
         </div>
     </section>
 
     <section id="code">
-        <h2>Beispiel: Sauberes Coding</h2>
+        <h2>Mobile Responsive Code</h2>
+        <p>In der App-Entwicklung ist "Mobile First" kein Trend, sondern Gesetz.</p>
         <pre>
-function solveProblem(requirement) {
-    if (requirement.isClear) {
-        return "Clean Code written!";
-    } else {
-        return "Ask stakeholders for clarification.";
-    }
+@media (max-width: 600px) {
+  .navigation {
+    display: none; /* Burger-Menü hier */
+  }
+  .content {
+    width: 100%;
+  }
 }
         </pre>
     </section>
+
+    <footer>
+        &copy; 2024 - Erstellt als multimediale Präsentationsstütze
+    </footer>
 
 </body>
 </html>
