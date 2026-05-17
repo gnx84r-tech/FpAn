@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Präsentation: Fachinformatiker AE</title>
+    <style>
+        :root {
+            --primary: #00ffcc;
+            --bg: #0d1117;
+            --text: #c9d1d9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            text-align: center;
+        }
+
+        h1 { color: var(--primary); font-size: 3rem; }
+
+        section {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #161b22;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        pre {
+            background: #010409;
+            padding: 15px;
+            border-radius: 5px;
+            color: #79c0ff;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fachinformatiker <br><span>Anwendungsentwicklung</span></h1>
+        <p>Logik. Code. Lösungen.</p>
+    </header>
+
+    <section id="ueberblick">
+        <h2>Was macht ein FIAE?</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Analyse</h3>
+                <p>Nutzeranforderungen verstehen und technische Konzepte erstellen.</p>
+            </div>
+            <div class="card">
+                <h3>Coding</h3>
+                <p>Softwarelösungen in verschiedenen Programmiersprachen realisieren.</p>
+            </div>
+            <div class="card">
+                <h3>Testen</h3>
+                <p>Fehler finden (Debugging) und Qualität sicherstellen.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="code">
+        <h2>Beispiel: Sauberes Coding</h2>
+        <pre>
+function solveProblem(requirement) {
+    if (requirement.isClear) {
+        return "Clean Code written!";
+    } else {
+        return "Ask stakeholders for clarification.";
+    }
+}
+        </pre>
+    </section>
+
+</body>
+</html>
