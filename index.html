@@ -4,6 +4,326 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Präsentation: Fachinformatiker AE</title>
+    
+    <link rel="icon" type="image/x-icon" href="https://icon-icons.com/images/quality_icons.webp">
+    
+    <style>
+        :root {
+            --primary: #00ffcc;
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --text: #c9d1d9;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                        url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-content { width: 100%; max-width: 800px; }
+
+        h1 { 
+            color: var(--primary);
+            /* Optimierte Schriftgröße für Mobile */
+            font-size: clamp(1.5rem, 8vw, 3.5rem); 
+            line-height: 1.1;
+            margin: 0;
+            text-transform: uppercase;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        h1 span {
+            display: block;
+            color: #fff;
+            /* Das lange Wort skaliert jetzt noch vorsichtiger */
+            font-size: clamp(0.9rem, 6vw, 2.5rem); 
+            font-weight: 300;
+            margin-top: 5px;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        pre {
+            background: #010409;
+            padding: 20px;
+            border-radius: 8px;
+            color: #79c0ff;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            border: 1px solid #30363d;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="hero-content">
+            <h1>Fachinformatiker <span>Anwendungsentwicklung</span></h1>
+        </div>
+    </header>
+
+    <section id="ueberblick">
+        <h2>Das Berufsbild</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://icon-icons.com/images/quality_icons.webp" alt="Icon" class="icon">
+                <h3>Entwicklung</h3>
+                <p>Planung und Realisierung von Individualsoftware.</p>
+            </div>
+            <div class="card">
+                <img src="https://icon-icons.com/images/quality_icons.webp" alt="Icon" class="icon">
+                <h3>Datenbanken</h3>
+                <p>Modellierung komplexer Datenstrukturen.</p>
+            </div>
+            <div class="card">
+                <img src="https://icon-icons.com/images/quality_icons.webp" alt="Icon" class="icon">
+                <h3>Testing</h3>
+                <p>Qualitätssicherung durch Test-Driven Development.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="code">
+        <h2>Deployment Ready</h2>
+        <pre>
+# Favicon erfolgreich eingebunden
+# Responsive Design aktiv
+# Mobile-First Check: OK
+        </pre>
+    </section>
+
+    <footer>
+        Multi-Plattform Präsentation | Fachinformatik AE
+    </footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Präsentation: Fachinformatiker AE</title>
+    
+    <link rel="icon" type="image/x-icon" href="https://icon-icons.com/images/quality_icons.webp">
+    
+    <style>
+        :root {
+            --primary: #00ffcc;
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --text: #c9d1d9;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                        url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-content { width: 100%; max-width: 800px; }
+
+        h1 { 
+            color: var(--primary);
+            /* Optimierte Schriftgröße für Mobile */
+            font-size: clamp(1.5rem, 8vw, 3.5rem); 
+            line-height: 1.1;
+            margin: 0;
+            text-transform: uppercase;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        h1 span {
+            display: block;
+            color: #fff;
+            /* Das lange Wort skaliert jetzt noch vorsichtiger */
+            font-size: clamp(0.9rem, 6vw, 2.5rem); 
+            font-weight: 300;
+            margin-top: 5px;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        pre {
+            background: #010409;
+            padding: 20px;
+            border-radius: 8px;
+            color: #79c0ff;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            border: 1px solid #30363d;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="hero-content">
+            <h1>Fachinformatiker <span>Anwendungsentwicklung</span></h1>
+        </div>
+    </header>
+
+    <section id="ueberblick">
+        <h2>Das Berufsbild</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://icon-icons.com/images/quality_icons.webp" alt="Icon" class="icon">
+                <h3>Entwicklung</h3>
+                <p>Planung und Realisierung von Individualsoftware.</p>
+            </div>
+            <div class="card">
+                <img src="https://icon-icons.com/images/quality_icons.webp" alt="Icon" class="icon">
+                <h3>Datenbanken</h3>
+                <p>Modellierung komplexer Datenstrukturen.</p>
+            </div>
+            <div class="card">
+                <img src="https://icon-icons.com/images/quality_icons.webp" alt="Icon" class="icon">
+                <h3>Testing</h3>
+                <p>Qualitätssicherung durch Test-Driven Development.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="code">
+        <h2>Deployment Ready</h2>
+        <pre>
+# Favicon erfolgreich eingebunden
+# Responsive Design aktiv
+# Mobile-First Check: OK
+        </pre>
+    </section>
+
+    <footer>
+        Multi-Plattform Präsentation | Fachinformatik AE
+    </footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Präsentation: Fachinformatiker AE</title>
     <style>
         :root {
             --primary: #00ffcc;
