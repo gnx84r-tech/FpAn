@@ -12,9 +12,7 @@
             --text: #c9d1d9;
         }
 
-        * {
-            box-sizing: border-box; /* Verhindert Layout-Fehler durch Padding */
-        }
+        * { box-sizing: border-box; }
 
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -23,14 +21,13 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            overflow-x: hidden; /* Verhindert horizontales Scrollen auf Handys */
+            overflow-x: hidden;
         }
 
-        /* Hero Section - Mobil optimiert */
+        /* Hero Section - Fokus auf die Überschrift */
         header {
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
@@ -41,18 +38,31 @@
             padding: 20px;
         }
 
+        .hero-content {
+            width: 100%;
+            max-width: 800px;
+        }
+
         h1 { 
-            color: var(--primary); 
-            font-size: clamp(2rem, 8vw, 3.5rem); /* Schriftgröße passt sich flüssig an */
-            margin-bottom: 10px;
+            color: var(--primary);
+            /* Fluid Typography: Passt sich der Breite an */
+            font-size: clamp(1.5rem, 10vw, 3.5rem); 
+            line-height: 1.2;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            word-wrap: break-word;
+            hyphens: auto; /* Erlaubt Silbentrennung auf Handys */
         }
 
-        header p {
-            font-size: clamp(1rem, 4vw, 1.5rem);
-            opacity: 0.8;
+        h1 span {
+            display: block;
+            color: #fff;
+            /* Das lange Wort bekommt etwas weniger Wumms, damit es nicht übersteht */
+            font-size: 0.8em; 
+            font-weight: 300;
         }
 
-        /* Container für Inhalte */
         section {
             padding: 60px 20px;
             max-width: 1000px;
@@ -66,10 +76,8 @@
             font-size: 1.8rem;
         }
 
-        /* Responsives Grid */
         .card-container {
             display: grid;
-            /* Automatische Spalten: mindestens 280px, sonst 1 Spalte */
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
             gap: 20px;
         }
@@ -80,44 +88,32 @@
             border-radius: 12px;
             border-left: 4px solid var(--primary);
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            transition: transform 0.2s ease;
         }
 
-        /* Code-Snippet Optimierung */
         pre {
             background: #010409;
             padding: 20px;
             border-radius: 8px;
             color: #79c0ff;
-            overflow-x: auto; /* Wichtig für Mobile! */
+            overflow-x: auto;
             font-size: 0.9rem;
             border: 1px solid #30363d;
         }
 
-        /* Footer / Kontakt */
         footer {
             text-align: center;
             padding: 40px 20px;
             font-size: 0.8rem;
-            opacity: 0.6;
-        }
-
-        /* Media Query für sehr kleine Bildschirme */
-        @media (max-width: 480px) {
-            section {
-                padding: 40px 15px;
-            }
-            .card {
-                padding: 15px;
-            }
+            opacity: 0.5;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Fachinformatiker <br><span style="color:white">Anwendungsentwicklung</span></h1>
-        <p>Präsentiert von [Dein Name]</p>
+        <div class="hero-content">
+            <h1>Fachinformatiker <span>Anwendungsentwicklung</span></h1>
+        </div>
     </header>
 
     <section id="ueberblick">
@@ -125,36 +121,35 @@
         <div class="card-container">
             <div class="card">
                 <h3>💻 Entwicklung</h3>
-                <p>Planung und Umsetzung von Softwareprojekten mit modernen Frameworks.</p>
+                <p>Konzeption und Programmierung komplexer Softwarelösungen für verschiedenste Branchen.</p>
             </div>
             <div class="card">
-                <h3>🗄️ Datenbanken</h3>
-                <p>Strukturierung und Verwaltung von Datenmengen (SQL/NoSQL).</p>
+                <h3>🗄️ Datenstruktur</h3>
+                <p>Design von relationalen Datenbanken und effizienten Abfrage-Algorithmen.</p>
             </div>
             <div class="card">
-                <h3>⚙️ Prozesse</h3>
-                <p>Optimierung von Betriebsabläufen durch maßgeschneiderte IT-Lösungen.</p>
+                <h3>⚙️ Test & QA</h3>
+                <p>Systematisches Testing und Debugging zur Sicherstellung der Softwarequalität.</p>
             </div>
         </div>
     </section>
 
     <section id="code">
-        <h2>Mobile Responsive Code</h2>
-        <p>In der App-Entwicklung ist "Mobile First" kein Trend, sondern Gesetz.</p>
+        <h2>Clean Code</h2>
+        <p>In der Entwicklung achten wir auf Lesbarkeit und Wartbarkeit.</p>
         <pre>
-@media (max-width: 600px) {
-  .navigation {
-    display: none; /* Burger-Menü hier */
-  }
-  .content {
-    width: 100%;
+// Beispiel für eine saubere Struktur
+function initApp() {
+  const status = checkSystem();
+  if (status.isReady) {
+    console.log("System läuft...");
   }
 }
         </pre>
     </section>
 
     <footer>
-        &copy; 2024 - Erstellt als multimediale Präsentationsstütze
+        Multi-Plattform Präsentation | Fachinformatik AE
     </footer>
 
 </body>
