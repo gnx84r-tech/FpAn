@@ -24,6 +24,161 @@
             overflow-x: hidden;
         }
 
+        header {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                        url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-content { width: 100%; max-width: 800px; }
+
+        h1 { 
+            color: var(--primary);
+            font-size: clamp(1.5rem, 10vw, 3.5rem); 
+            line-height: 1.2;
+            margin: 0;
+            text-transform: uppercase;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+
+        h1 span {
+            display: block;
+            color: #fff;
+            font-size: 0.8em; 
+            font-weight: 300;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        /* Icon Styling */
+        .icon {
+            width: 50px;
+            height: 50px;
+            object-fit: contain; /* Behält Proportionen bei */
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        pre {
+            background: #010409;
+            padding: 20px;
+            border-radius: 8px;
+            color: #79c0ff;
+            overflow-x: auto;
+            font-size: 0.9rem;
+            border: 1px solid #30363d;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="hero-content">
+            <h1>Fachinformatiker <span>Anwendungsentwicklung</span></h1>
+        </div>
+    </header>
+
+    <section id="ueberblick">
+        <h2>Das Berufsbild</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://icon-icons.com/images/quality_icons.webp" alt="Entwicklung Icon" class="icon">
+                <h3>Entwicklung</h3>
+                <p>Konzeption und Programmierung komplexer Softwarelösungen mit Fokus auf Code-Qualität.</p>
+            </div>
+            <div class="card">
+                <img src="https://icon-icons.com/images/quality_icons.webp" alt="Datenbank Icon" class="icon">
+                <h3>Struktur</h3>
+                <p>Effiziente Datenhaltung und Architektur, die auch bei hohen Lasten performant bleibt.</p>
+            </div>
+            <div class="card">
+                <img src="https://icon-icons.com/images/quality_icons.webp" alt="Qualität Icon" class="icon">
+                <h3>Qualitätssicherung</h3>
+                <p>Durch automatisiertes Testing und Code-Reviews stellen wir fehlerfreie Software sicher.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="code">
+        <h2>Modernes Environment</h2>
+        <p>Wir arbeiten mit Tools, die Schnelligkeit und Sicherheit garantieren.</p>
+        <pre>
+git commit -m "feat: add quality icons to presentation"
+npm run build
+        </pre>
+    </section>
+
+    <footer>
+        Multi-Plattform Präsentation | Fachinformatik AE
+    </footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Präsentation: Fachinformatiker AE</title>
+    <style>
+        :root {
+            --primary: #00ffcc;
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --text: #c9d1d9;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
         /* Hero Section - Fokus auf die Überschrift */
         header {
             min-height: 100vh;
